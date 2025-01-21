@@ -82,7 +82,6 @@ The goal of this project is to explore different face detection and recognition 
 - Measured and compared FPS for:
   - Haar Cascade.
   - Dlib (face detection and landmarks).
-  - FaceNet.
 - Observed that FaceNet offers higher accuracy but is slower compared to Haar Cascade and Dlib.
 
 ---
@@ -104,6 +103,9 @@ Ensure the following libraries are installed:
 - Facenet-PyTorch
 - PyTorch
 - tqdm
+- PIL
+- numpy
+- imutils
 
 Install dependencies using pip:
 ```bash
@@ -113,15 +115,19 @@ pip install opencv-python dlib facenet-pytorch torch tqdm
 ### Execution
 1. **Run Haar Cascade**:
    ```bash
-   python haar_cascade.py
+   python haarCam.py
+   python haarPhoto.py
    ```
 2. **Run Dlib**:
    ```bash
-   python dlib_landmarks.py
+   python dlibCam.py
+   python dlibPhoto.py
+   python 68landmark.py 
    ```
 3. **Run FaceNet**:
    ```bash
-   python facenet_recognition.py
+   python facenet.py
+   python facenetPhoto.py
    ```
 
 ---
