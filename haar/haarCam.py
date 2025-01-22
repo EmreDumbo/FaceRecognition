@@ -47,7 +47,7 @@ while True:
             ptA = (fX + eX, fY + eY)
             ptB = (fX + eX + eW, fY + eY + eH)
             cv2.rectangle(frame, ptA, ptB, (0, 0, 255), 2)        
-    cv2.rectangle(frame, (fX, fY), (fX + fW, fY + fH), (255, 0, 0), 2)
+        cv2.rectangle(frame, (fX, fY), (fX + fW, fY + fH), (255, 0, 0), 2)
     cv2.imshow("webcam", frame)
     if cv2.waitKey(1) == 27:
         break  
