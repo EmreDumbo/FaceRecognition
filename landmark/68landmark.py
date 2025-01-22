@@ -6,7 +6,7 @@ import dlib
 import cv2
 
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor("/Users/emre/Desktop/staj/Shape Predictor 68 Face Landmarks.dat")
+predictor = dlib.shape_predictor("/Users/emre/Desktop/staj/landmark/Shape Predictor 68 Face Landmarks.dat")
 
 image = cv2.imread("images/eyedetect.jpg")
 image = imutils.resize(image, width=500)
