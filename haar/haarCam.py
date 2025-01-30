@@ -14,7 +14,6 @@ args = vars(ap.parse_args())
 detectorPaths = {
     "face" : "haarcascade_frontalface_default.xml",
     "eyes" : "haarcascade_eye.xml",
-    "smile" : "haarcascade_smile.xml" 
 }
 detectors = {}
 for (name, path) in detectorPaths.items():
@@ -40,9 +39,6 @@ while True:
     for(fX, fY, fW, fH) in faceCascade:
         faceROI = gray[fY: fY + fH , fX: fX + fW]
         eyeCascade = detectors["eyes"].detectMultiScale(faceROI, scaleFactor=1.1, minNeighbors=10, minSize=(15,15), flags = cv2.CASCADE_SCALE_IMAGE)
-        smileRects = detectors["smile"].detectMultiScale(
-			faceROI, scaleFactor=1.1, minNeighbors=10,
-			minSize=(15, 15), flags=cv2.CASCADE_SCALE_IMAGE)
         for (eX, eY, eW, eH) in eyeCascade:
             ptA = (fX + eX, fY + eY)
             ptB = (fX + eX + eW, fY + eY + eH)

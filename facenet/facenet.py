@@ -27,7 +27,7 @@ mtcnn = MTCNN(
 )
 mtcnn.detect_box = MethodType(detect_box, mtcnn)
 
-saved_pictures = "/Users/emre/Desktop/staj/images"
+saved_pictures = "images"
 all_people_faces = {}
 
 

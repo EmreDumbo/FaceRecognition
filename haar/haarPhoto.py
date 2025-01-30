@@ -20,10 +20,10 @@ def detectEyes(image, eyeCascade):
     return image
 
 def main():
-    faceCascade = cv2.CascadeClassifier('/Users/emre/Desktop/staj/cascades/haarcascade_frontalface_default.xml')
-    eyeCascade = cv2.CascadeClassifier('/Users/emre/Desktop/staj/cascades/haarcascade_eye.xml')
+    faceCascade = cv2.CascadeClassifier('cascades/haarcascade_frontalface_default.xml')
+    eyeCascade = cv2.CascadeClassifier('cascades/haarcascade_eye.xml')
 
-    img = cv2.imread('/Users/emre/Desktop/staj/images/eyedetect.jpg')
+    img = cv2.imread('images/eyedetect.jpg')
 
     imgFaces = detectFaces(img.copy(), faceCascade)
 

@@ -6,8 +6,8 @@ import cv2
 mtcnn = MTCNN()
 resnet = InceptionResnetV1(pretrained='vggface2').eval()
 
-img1 = Image.open("/Users/emre/Desktop/staj/images/depp.jpg")
-img2 = Image.open("/Users/emre/Desktop/staj/images/emre2.jpg")
+img1 = Image.open("images/depp.jpg")
+img2 = Image.open("images/eyedetect.jpg")
 
 
 faces1, _ = mtcnn.detect(img1)
@@ -17,7 +17,6 @@ if faces1 is not None and faces2 is not None:
     aligned1 = mtcnn(img1)
     aligned2 = mtcnn(img2)
     
-
     aligned1 = aligned1.unsqueeze(0) if aligned1 is not None else None
     aligned2 = aligned2.unsqueeze(0) if aligned2 is not None else None
     
